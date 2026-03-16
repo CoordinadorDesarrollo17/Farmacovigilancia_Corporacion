@@ -1,0 +1,105 @@
+﻿@{
+    ViewData["Title"] = "Corporación Cobefar";
+}
+
+<main class="container mb-5">
+    <h1 class="ui-text-primary text-center fw-bold mb-5 " style="font-size:2rem;">
+    Nuestros Productos
+    </h1>
+
+    <!-- Filtros y ordenamiento -->
+    <form class="row g-3 mb-4 justify-content-center align-items-center buscador-form">
+        <div class="col-md-6">
+            <input type="text" class="form-control buscador-input" placeholder="Buscar Producto..."
+                   id="busquedaProducto">
+        </div>
+
+        <div class="col-md-3">
+            <select class="form-select buscador-input" id="ordenarProducto">
+                <option value="">Ordenar por...</option>
+                <option value="nombre">Nombre (A-Z)</option>
+                <option value="nombreDesc">Nombre (Z-A)</option>
+            </select>
+        </div>
+
+        <div class="col-md-2">
+            <button type="submit" class="w-100 btn rounded-5" style="color:#ffffff; background: #4f8c4c; ">
+                <i class="bi bi-search"></i> Buscar
+            </button>
+        </div>
+    </form>
+
+    <!-- Fin filtros y ordenamiento -->
+    <div class="row g-4 row-cols-1 row-cols-md-2 justify-content-center" id="listaProductos">
+    
+        <!-- Producto 1 -->
+        <div class="col">
+            <div class="d-flex flex-column-reverse flex-md-row ui-bg-soft rounded-5 shadow-sm p-3 align-items-center h-100 producto-card">
+                <img src="~/img/AMOXICILINA.png" alt="Producto 1" class="rounded-3 me-4"
+                     style="width:180px; height:180px; object-fit:contain;">
+                <div class="ui-text-p mb-2 text-center w-100">
+                    <h5 class="mb-2 ui-text-primary "><span class="fw-bold">Amoxicilina 500mg</span><br /><span>Cápsula</span></h5>
+                </div>
+            </div>
+        </div>
+        <!-- Producto 2 -->
+        <div class="col">
+            <div class="d-flex flex-column-reverse flex-md-row ui-bg-soft rounded-5 shadow-sm p-3 align-items-center h-100 producto-card">
+                <img src="~/img/Ciprofloxacino.png" alt="Producto 2" class="rounded-3 me-4"
+                     style="width:180px; height:180px; object-fit:contain;">
+                <div class="ui-text-p mb-2 text-center w-100">
+                    <h5 class="mb-2 ui-text-primary"><span class="fw-bold">Ciprofloxacino 0.3%</span><br /><span>Solución Oftálmica</span></h5>
+                </div>
+            </div>
+        </div>
+        <!-- Producto 3 -->
+        <div class="col">
+            <div class="d-flex flex-column-reverse flex-md-row ui-bg-soft rounded-5 shadow-sm p-3 align-items-center h-100 producto-card">
+                <img src="~/img/ZOCEF.png" alt="Producto 3" class="rounded-3 me-4 "
+                     style="width:180px; height:180px; object-fit:contain;">
+                <div class="ui-text-p mb-2 text-center w-100">
+                    <h5 class="mb-2 ui-text-primary"><span class="fw-bold">Zocef</span><br /><span>Ceftriaxona 1g Polvo y Disolvente para Solución Inyectable</span></h5>
+                </div>
+            </div>
+        </div>
+        <!-- Producto 4 -->
+        <div class="col">
+            <div class="d-flex flex-column-reverse flex-md-row ui-bg-soft rounded-5 shadow-sm p-3 align-items-center h-100 producto-card">
+                <img src="~/img/Doloketal.png" alt="Producto 4" class="rounded-3 me-4" style="width:180px; height:180px; object-fit:contain;">
+                <div class="ui-text-p mb-2 text-center w-100">
+                    <h5 class="mb-2 ui-text-primary"><span class="fw-bold">Doloketal</span><br /><span>Ketorolaco 10mg Comprimido Recubierto</span></h5>
+                </div>
+            </div>
+        </div>
+
+        <!-- Producto 5 -->
+        <div class="col">
+            <div class="d-flex flex-column-reverse flex-md-row ui-bg-soft rounded-5 shadow-sm p-3 align-items-center h-100 producto-card">
+                <img src="~/img/Gravofar.png" alt="Producto 5" class="rounded-3 me-4" style="width:180px; height:180px; object-fit:contain;">
+                <div class="ui-text-p mb-2 text-center w-100">
+                    <h5 class="mb-2 ui-text-primary"><span class="fw-bold">Gravofar</span><br /><span>Dimenhidrinato 50mg Tableta</span></h5>
+                </div>
+            </div>
+        </div>
+
+        <!-- Producto 6 -->
+        <div class="col">
+            <div class="d-flex flex-column-reverse flex-md-row ui-bg-soft rounded-5 shadow-sm p-3 align-items-center h-100 producto-card">
+                <img src="~/img/Buscadol.png" alt="Producto 6" class="rounded-3 me-4" style="width:180px; height:180px; object-fit:contain;">
+                <div class="ui-text-p mb-2 text-center w-100">
+                    <h5 class="mb-2 ui-text-primary"><span class="fw-bold">Buscadol Compuesto</span><br /><span>Hioscina N-Butilbromuro 10mg + Paracetamol 500mg Tableta Recubierta</span></h5>
+                </div>
+            </div>
+        </div>
+
+        <!-- Producto 7 -->
+        <div class="col">
+            <div class="d-flex flex-column-reverse flex-md-row ui-bg-soft rounded-5 shadow-sm p-3 align-items-center h-100 producto-card">
+                <img src="~/img/Dolomot.png" alt="Producto 7" class="rounded-3 me-4" style="width:180px; height:180px; object-fit:contain;">
+                <div class="ui-text-p mb-2 text-center w-100">
+                    <h5 class="mb-2 ui-text-primary"><span class="fw-bold">Dolomot Forte</span><br /><span>Diclofenaco 2% Gel</span></h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>

@@ -1,0 +1,211 @@
+﻿@{
+    ViewData["Title"] = "Corporación Cobefar";
+}
+
+<section class="farmacovigilancia mt-5 py-5">
+    <div class="container">
+
+        <div class="row">
+            <div class="col-12 text-center mb-4">
+                <h2 class="ui-text-primary">Farmacovigilancia</h2>
+                <p class="lead ui-text-muted">
+                    Corporación Cobefar cuenta con una Unidad de Farmacovigilancia
+                    encargada de recopilar, evaluar y gestionar la información relacionada con la seguridad
+                    de sus productos farmacéuticos. Los reportes son analizados de manera continua y comunicados a
+                    la Autoridad
+                    Nacional de Medicamentos, con el fin de promover el uso seguro de los productos y contribuir al
+                    bienestar de los pacientes.
+                </p>
+                <a asp-controller="Home" asp-action="RegistrarFarmacovigilancia" class="btn rounded-5" style="color:#ffffff; background: #4f8c4c; ">Reportar caso</a>
+            </div>
+        </div>
+
+        <!-- AQUÍ PONER CARRUSEL -->
+        <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <!-- Slide 1 -->
+                <div class="carousel-item active">
+                    <div class="row g-0 align-items-stretch ui-bg-soft rounded-4">
+                        <div class="col-md-6">
+                            <img src="~/img/Slide 1 - Farmacovigilancia.png" class="d-block w-100 h-100 object-fit-cover rounded-4"
+                                 alt="Farmacovigilancia 1" >
+                        </div>
+
+                        <div class="col-md-6 bg-nosotros text-success p-4 pt-5 d-flex flex-column justify-content-center align-items-center sliderFarmaco"
+                             style="min-height:300px;max-height:400px;">
+                            <div class="w-100 text-left">
+                                <h3 class="mb-3 ui-text-primary">
+                                    ¿Qué es la <span class="fw-bold">Farmacovigilancia</span>?
+                                </h3>
+                                <p class="ui-text-muted">
+                                    Es la ciencia y las actividades relacionadas con la detección, evaluación,
+                                    comprensión y prevención de los efectos adversos de los medicamentos.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 2 -->
+                <div class="carousel-item ">
+                    <div class="row g-0 align-items-stretch ui-bg-soft rounded-4">
+                        <div class="col-md-6">
+                            <img src="~/img/Slide 2 - Farmacovigilancia.png" class="d-block w-100 h-100 object-fit-cover rounded-4"
+                                 alt="Farmacovigilancia 2" >
+                        </div>
+                        <div class="col-md-6 bg-nosotros text-success p-4 pt-5 d-flex flex-column justify-content-center align-items-center sliderFarmaco"
+                             style="min-height:300px;max-height:400px;">
+
+                            <div class="w-100 text-left">
+                                <h3 class="mb-3 ui-text-primary">
+                                    ¿Por qué es importante <span class="fw-bold">la Farmacovigilancia</span>?
+                                </h3>
+                                <ul class="pl-100 ui-text-muted">
+                                    <li>
+                                        Vigilar la seguridad, el cuidado de los pacientes en relación al uso del medicamento.
+                                    </li>
+                                    <li>Contribuir al uso seguro y racional del medicamento.</li>
+                                    <li>Disminuir los riesgos asociados al uso del medicamento.</li>
+                                </ul>
+                            </div>     
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 3 -->
+                <div class="carousel-item">
+                    <div class="row g-0 align-items-stretch ui-bg-soft rounded-4">
+                        <div class="col-md-6">
+                            <img src="~/img/Slide 3 - Farmacovigilancia.png" class="d-block w-100 h-100 object-fit-cover rounded-4"
+                                 alt="Farmacovigilancia 3" >
+                        </div>
+
+                        <div class="col-md-6 bg-nosotros text-success p-4 pt-5 d-flex flex-column justify-content-center align-items-center sliderFarmaco"
+                             style="min-height:300px;max-height:400px;">
+
+                            <div class="w-100 text-left">
+                                <h3 class="mb-3 ui-text-primary">
+                                    ¿Qué es un <span class="fw-bold">
+                                        evento
+                                        adverso
+                                    </span>?
+                                </h3>
+                                <ul class="pl-100 ui-text-muted">
+                                    <li>
+                                        "Un evento adverso es cualquier signo, síntoma o enfermedad indeseable y no
+                                        intencionada, asociado al uso de un producto farmacéutico, considerado o no
+                                        relacionado con dicho producto"
+                                    </li>
+
+                                </ul>
+                            </div>
+                             
+                             
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 4 -->
+                <div class="carousel-item">
+                    <div class="row g-0 align-items-stretch ui-bg-soft rounded-4">
+                        <div class="col-md-6">
+                            <img src="~/img/Slide 4 - Farmacovigilancia.png" class="d-block w-100 h-100 object-fit-cover rounded-4"
+                                 alt="Farmacovigilancia 3" >
+                        </div>
+
+                        <div class="col-md-6 bg-nosotros text-success p-4 pt-5 d-flex flex-column justify-content-center align-items-center sliderFarmaco"
+                             style="min-height:300px;max-height:400px;">
+
+                            <div class="w-100 text-left">
+                                <h3 class="mb-3 ui-text-primary">
+                                    ¿Qué debería <span class="fw-bold">reportar</span>?
+                                </h3>
+                                <ul class="pl-100 ui-text-muted">
+                                    <li>Evento adverso, graves o no, esperados o no esperados.</li>
+                                    <li>Sospecha de reacción adversa.</li>
+                                    <li>Falta de eficacia.</li>
+                                    <li>Efecto terapéutico beneficioso no esperado.</li>
+                                    <li>Exposición accidental con sospecha de reacción adversa.</li>
+                                    <li>Exposición ocupacional con sospecha de reacción adversa.</li>
+                                    <li>
+                                        Duda, consulta, información y/o notificaciones de las autoridades
+                                        regulatorias.
+                                    </li>
+                                    
+                                </ul>
+                            </div>
+                             
+                            
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 5 -->
+                <div class="carousel-item">
+                    <div class="row g-0 align-items-stretch ui-bg-soft rounded-4">
+                        <div class="col-md-6">
+                            <img src="~/img/Slide 5 - Farmacovigilancia.png" class="d-block w-100 h-100 object-fit-cover rounded-4"
+                                 alt="Farmacovigilancia 3" >
+                        </div>
+
+                        <div class="col-md-6 bg-nosotros text-success p-4 pt-5 d-flex flex-column justify-content-center align-items-center sliderFarmaco"
+                             style="min-height:300px;max-height:400px;">
+
+                            <div class="w-100 text-left">
+                                <h3 class="mb-3 ui-text-primary">
+                                    ¿Cómo <span class="fw-bold">reportar</span>?
+                                </h3>
+                                <ul class="pl-100 ui-text-muted">
+                                    <li>Puedes contarnos lo sucedido mediante el correo o número telefónico, nuestro equipo de farmacovigilancia está listo para atenderte.</li>
+                                </ul>
+                                <p style="text-align:center;color: #686868;">fv@corporacioncobefar.com.pe<br /><span>(922-528-370)</span></p>
+                            </div>
+                             
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 6 -->
+                <div class="carousel-item">
+                    <div class="row g-0 align-items-stretch ui-bg-soft rounded-4">
+                        <div class="col-md-6">
+                            <img src="~/img/Slide 6 - Farmacovigilancia.png" class="d-block w-100 h-100 object-fit-cover rounded-4"
+                                 alt="Farmacovigilancia 3" >
+                        </div>
+
+                        <div class="col-md-6 bg-nosotros text-success p-4 pt-5 d-flex flex-column justify-content-center align-items-center sliderFarmaco"
+                             style="min-height:300px;max-height:400px;">
+
+                            <div class="w-100 text-left">
+                                <h3 class="mb-3 ui-text-primary">
+                                    Nuestro <span class="fw-bold">Compromiso</span>
+                                </h3>
+                                <ul class="pl-100 ui-text-muted">
+                                    <li>Promover el uso seguro de los medicamentos.</li>
+                                    <li>Educar y sensibilizar sobre farmacovigilancia.</li>
+                                    <li>Proteger la salud de la población.</li>
+                                </ul>
+                            </div>
+                             
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Botones para cambiar de slide -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample"
+                    data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample"
+                    data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+        <!-- AQUÍ TERMINA CARRUSEL -->
+
+    </div>
+</section>

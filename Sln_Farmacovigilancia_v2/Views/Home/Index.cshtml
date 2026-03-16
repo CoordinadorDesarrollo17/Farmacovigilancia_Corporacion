@@ -1,0 +1,281 @@
+﻿@{
+    ViewData["Title"] = "Corporación Cobefar";
+}
+
+<section  >
+    <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner " >
+           
+            <div class="carousel-item active" style="height: 600px;">
+                <img src="~/img/Slide 1 - Inicio.jpg" class="w-100 h-100 object-fit-cover" alt="Banner">
+
+                <div class="carousel-caption hero-caption text-start" >
+                    <h1 class="fw-bold">
+                        Bienvenidos<br>
+                        <span class="hero-highlight">al mundo farmacéutico</span>
+                    </h1>
+
+                    <p>
+                        Brindamos productos farmacéuticos mediante la importación y comercialización de productos de origen nacional e internacional, garantizando un servicio confiable y el cumplimiento de la normativa sanitaria vigente.
+                    </p>
+
+                    <a href="@Url.Action("Index", "Home")#nosotros" class="btn btn-success rounded-pill px-4">
+                        Conoce más
+                    </a>
+                </div>
+            </div>
+
+       
+            <div class="carousel-item " style="height: 600px;">
+                <img src="~/img/Slide 2 - Inicio.jpg" class="w-100 h-100 object-fit-cover" alt="Banner">
+
+          
+                <div class="carousel-caption hero-caption text-start">
+                    <h1 class="fw-bold mb-3">
+                        Productos seguros,<br>
+                        <span class="hero-highlight">calidad garantizada</span>
+                    </h1>
+
+                    <p class="mb-4">
+                     Todos nuestros productos cuentan con registros sanitarios vigentes, cumpliendo los requisitos establecidos por las autoridades regulatorias para asegurar su calidad y seguridad.
+                    </p>
+
+                    <a asp-controller="Home" asp-action="productos" class="btn btn-success rounded-pill px-4">
+                        Conoce más
+                    </a>
+                </div>
+            </div>
+
+            <div class="carousel-item" style="height: 600px;">
+                <img src="~/img/Slide 3 - Inicio.jpg" class="w-100 h-100 object-fit-cover" alt="Banner">
+
+                <div class="carousel-caption hero-caption text-start" >
+                    <h1 class="fw-bold mb-3">
+                        Comprometidos<br>
+                        <span class="hero-highlight">con la seguridad farmacéutica</span>
+                    </h1>
+
+                    <p class="mb-4">
+                     Contamos con un área especializada de farmacovigilancia dedicada al monitoreo constante de nuestros productos farmacéuticos.
+                    </p>
+
+                    <a asp-controller="Home" asp-action="farmacovigilancia" class="btn btn-success rounded-pill px-4">
+                        Conoce más
+                    </a>
+                </div>
+            </div>
+
+            <!-- Botones para cambiar de slide -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample"
+                    data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample"
+                    data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+
+        </div>
+    </div>
+    
+    
+</section>
+<section id="nosotros" class="py-5 bg-white">
+    <div class="container">
+
+        <!-- NOSOTROS -->
+        <div class="row mb-5">
+            <div class="col-12">
+                <div class="ui-bg-soft row rounded-5 align-items-center g-4 mx-1 mx-sm-0  px-4 pb-4">
+                    <!--ui-bg-soft row rounded-bottom-5 align-items-center g-4  mx-sm-0-->
+                    <div class="col-lg-7">
+                        <div class="d-flex align-items-center gap-2 mb-3">
+                            <div class="ui-bg-primary text-white rounded-circle d-flex align-items-center justify-content-center"
+                                 style="width:50px;height:50px;">
+                                <img src="~/img/ICONO NOSOTROS.png" class="w-70 h-50 object-fit-cover" alt="Nosotros">
+                            </div>
+                            <h2 class="ui-text-primary fw-bold m-0">Nosotros</h2>
+                        </div>
+                        <p class="ui-text-muted lh-lg mb-0">
+                            Somos una empresa dedicada a la importación y comercialización de productos farmacéuticos, orientada al
+                            cumplimiento de los estándares de calidad y la normativa sanitaria vigente. Nuestra gestión se basa en
+                            valores y principios éticos que nos permiten contribuir responsablemente a la mejora de la salud y
+                            calidad de vida de la población.
+                        </p>
+                    </div>
+                    <div class="col-lg-5">
+                        <div class="w-100 rounded-4 overflow-hidden">
+                            <img src="~/img/FOTOGRAFIA NOSOTROS.png" class="w-100 h-100 object-fit-cover" alt="Nosotros">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- MISIÓN / VISIÓN -->
+        <div class="row g-4">
+            <div class="col-md-6">
+                <div class="ui-bg-soft rounded-5 p-4 text-center h-100">
+                    <h3 class="ui-text-primary fw-bold">Misión</h3>
+                    <div class="ui-bg-primary text-white rounded-circle d-flex
+                      align-items-center justify-content-center mx-auto mb-3" style="width:55px;height:55px;">
+                        <img src="~/img/ICONO DE MISION.png" class="w-70 h-50 object-fit-cover" alt="Mision">
+                    </div>
+                    <p class="ui-text-muted small lh-lg">
+                    Importar y comercializar productos farmacéuticos en el Perú, sustentados en una política de alta calidad, garantizando un servicio confiable y precios competitivos, que contribuyan a la salud y bienestar de nuestros clientes y consumidores, en cumplimiento de la normativa sanitaria nacional vigente.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="ui-bg-soft rounded-5 p-4 text-center h-100">
+                    <h3 class="ui-text-primary fw-bold">Visión</h3>
+                    <div class="ui-bg-primary text-white rounded-circle d-flex
+                      align-items-center justify-content-center mx-auto mb-3" style="width:55px;height:55px;">
+                        <img src="~/img/icono de visión.png" class="w-70 h-50 object-fit-cover" alt="Vision">
+                    </div>
+                    <p class="ui-text-muted small lh-lg">
+                       Ser reconocidos como la compañía farmacéutica líder en el Perú, con un sólido posicionamiento en el mercado nacional gracias a la calidad de nuestros productos, comprometidos con la salud y el bienestar de las personas, y promoviendo un enfoque sostenible y responsable respaldado por un equipo de profesionales altamente capacitados y competitivos.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+
+<!--Valores-->
+<section class="pb-3 bg-white">
+    <div class="container text-center">
+
+        <h1 class="ui-text-primary fw-bold mb-2">Nuestros valores nos definen</h1>
+        <p class="text-secondary">
+            Confianza que se construye sobre la base<br><span class="fw-bold mb-0">de la experiencia.</span>
+        </p>
+
+
+        <div class="row justify-content-center g-4">
+
+            <!-- VALOR 1 -->
+            <div class="col-sm-6 col-lg-4">
+                <div class=" ui-bg-soft rounded-5 p-4" style="height: 95%;">
+                    <div class="d-flex justify-content-center">
+                        <img src="~/img/ICONO INTEGRIDAD.png" class="valor-icon mb-3" alt="Integridad">
+                    </div>
+                    <h5 class="ui-text-primary fw-bold ">Integridad</h5>
+                    <p class="ui-text-muted small lh-lg mb-0">
+                        Conducimos nuestras actividades con rectitud y lealtad, asegurando
+                        prácticas responsables y alineadas con la normativa vigente y los valores del sector farmacéutico.
+                    </p>
+                </div>
+            </div>
+
+            <!-- VALOR 2 -->
+            <div class="col-sm-6 col-lg-4">
+                <div class="ui-bg-soft rounded-5 p-4" style="height: 95%;">
+                    <img src="~/img/ICONO DE CALIDAD.png" class="valor-icon mb-3" alt="Calidad">
+                    <h5 class="ui-text-primary fw-bold">Calidad</h5>
+                    <p class="ui-text-muted small lh-lg mb-0">
+                        Garantizamos la excelencia en nuestros productos y servicios mediante
+                        el cumplimiento riguroso de los estándares de calidad, las buenas practicas y la normativa vigente, orientados a la satisfacción y seguridad de nuestros clientes y consumidores.
+                    </p>
+                </div>
+            </div>
+
+            <!-- VALOR 3 -->
+            <div class="col-sm-6 col-lg-4">
+                <div class=" ui-bg-soft rounded-5 p-4" style="height: 95%;">
+                    <img src="~/img/ICONO TRANSPARENCIA.png" class="valor-icon mb-3" alt="Etica y transparencia">
+                    <h5 class="ui-text-primary fw-bold">Ética y transparencia</h5>
+                    <p class="ui-text-muted small lh-lg mb-0">
+                        Ejercemos nuestras operaciones con ética profesional y transparencia,
+                        garantizando decisiones responsables que contribuyan al desarrollo
+                        sostenible y al cuidado de la salud pública.
+                    </p>
+                </div>
+            </div>
+
+            <!-- VALOR 4 -->
+            <div class="col-sm-6 col-lg-4">
+                <div class=" ui-bg-soft rounded-5 p-4" style="height: 95%;">
+                    <img src="~/img/ICONO RESPONSABILIDAD.png" class="valor-icon mb-3" alt="Responsabilidad">
+                    <h5 class="ui-text-primary fw-bold">Responsabilidad</h5>
+                    <p class="ui-text-muted small lh-lg mb-0">
+                        Actuamos de manera consciente y diligente en cada una de nuestras actividades, tomando decisiones
+                        responsables que protejan la salud de las personas y generen confianza en nuestros clientes y aliados
+                        estratégicos.
+                    </p>
+                </div>
+            </div>
+
+            <!-- VALOR 5 -->
+            <div class="col-sm-6 col-lg-4">
+                <div class="ui-bg-soft rounded-5 p-4" style="height: 95%;">
+                    <img src="~/img/ICONO DE PROFESIONALISMO.png" class="valor-icon mb-3" alt="Profesionalismo">
+                    <h5 class="ui-text-primary fw-bold">Profesionalismo</h5>
+                    <p class="ui-text-muted small lh-lg mb-0">
+                        Desarrollamos nuestras actividades con rigor técnico, ética y vocación
+                        de servicio, fomentando la mejora continua y el cumplimiento de las buenas prácticas del sector
+                        farmacéutico.
+                    </p>
+                </div>
+            </div>
+
+            <!-- VALOR 6 -->
+            <div class="col-sm-6 col-lg-4">
+                <div class="ui-bg-soft rounded-5 p-4" style="height: 95%;">
+                    <img src="~/img/ICONO TRABAJO EN EQUIPO.png" class="valor-icon mb-3" alt="Trabajo en equipo">
+                    <h5 class="ui-text-primary fw-bold">Trabajo en equipo</h5>
+                    <p class="ui-text-muted small lh-lg mb-0">
+                        Promovemos un ambiente de cooperación y apoyo mutuo, donde el compromiso y la participación activa de cada
+                        integrante fortalecen el desempeño organizacional y el cumplimiento de nuestras metas.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<section id="certificaciones" class="pb-5 bg-white">
+    <div class="container">
+
+        <div class="text-center my-2">
+            <h3 class="d-inline-block footer-cobefar text-white fw-bold px-5 rounded-pill mb-0 p-1">
+                Certificación
+            </h3>
+        </div>
+        <p class="ui-text-muted text-center">
+            Contamos con certificación que avala nuestra calidad y<br /><span>compromiso.</span>
+        </p>
+
+        <div class="row align-items-stretch g-4">
+            <div class="col-md-5 d-flex">
+                <div class="certificacion-img w-100 rounded-4 overflow-hidden">
+                    <img src="~/img/Logo Certificado BPA.png" class="img-fluid object-fit-contain w-100 h-100" alt="Certificaciones">
+                </div>
+            </div>
+
+            <div class="col-md-7 d-flex">
+                <div class="ui-bg-soft rounded-4 p-4 p-lg-5 w-100">
+                    <h3 class="ui-text-primary fw-bold mb-2">
+                        Certificación Oficial
+                    </h3>
+                    <p class="ui-text-muted mb-0">
+                        Nuestros almacenes cumplen con la
+                        <span class="fw-bold">certificación de Buenas Prácticas de Almacenamiento (BPA)</span>,
+                        garantizando procesos y productos de calidad para todos nuestros clientes.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>

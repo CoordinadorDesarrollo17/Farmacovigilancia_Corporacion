@@ -1,0 +1,162 @@
+﻿@model datosFarmacovigilancia
+
+@{
+    ViewData["TItle"] = "Registrar caso";
+}
+
+<div class="background-container mt-5">
+    <div class="container-fluid ui-bg-soft rounded-5 p-3 p-lg-5">
+        <div class="row align-items-center ">
+
+            @* <div class="col-md-4 d-none d-md-flex align-items-stretch"> *@
+            <div class="col-md-4 d-flex align-items-stretch">
+                <img src="~/img/Dra.png"
+                     class="img-side w-100">
+            </div>
+
+            <div class="col-md-8 ">
+                <div class="bg-white rounded-5 p-5 ">
+
+                    <div class="form-container">
+                        <h2 style="color: #21359e;">Tu bienestar es <strong>nuestra prioridad</strong></h2>
+                        <p class="mb-4 ui-text-muted">Si experimentaste algún evento no esperado tras el uso de uno de nuestros productos, te invitamos a informarlo. Tu reporte contribuye a reforzar la seguridad y calidad.</p>
+
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                        <form id="formCrear">
+                            <!-- Datos del paciente -->
+                            <h5 class="mb-3 ui-text-primary">Datos del paciente</h5>
+
+                            <div class="mb-3">
+                                <input type="text" class="form-control ui-bg-soft rounded-4" asp-for="nombrePaciente" placeholder="Nombres o Iniciales" maxlength="100">
+                                <span asp-validation-for="nombrePaciente" class="text-danger"></span>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="mb-3">
+                                        <input type="number" class="form-control ui-bg-soft rounded-4" asp-for="edadPaciente" placeholder="Edad">
+                                        <span asp-validation-for="edadPaciente" class="text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="mb-3">
+                                        <select asp-for="sexoPaciente" class="form-select ui-bg-soft">
+                                            <option value="">Seleccione Sexo</option>
+                                            <option value="M">Masculino</option>
+                                            <option value="F">Femenino</option>
+                                        </select>
+                                        <span asp-validation-for="sexoPaciente" class="text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="mb-3">
+                                        <input type="tel" maxlength="9" class="form-control ui-bg-soft rounded-4 cls-numeric" asp-for="celularPaciente" placeholder="Número de contacto" onkeyup="validarDigitosCelular(this.value, this.id)">
+                                        <span asp-validation-for="celularPaciente" class="text-danger"></span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Datos del producto -->
+                            <h5 class="mb-3 ui-text-primary">Datos del Producto</h5>
+                            <div class="mb-3">
+                                <input type="text" class="form-control ui-bg-soft rounded-4" asp-for="nombreProducto" placeholder="Nombre del producto" maxlength="100">
+                                <span asp-validation-for="nombreProducto" class="text-danger"></span>
+                            </div>
+                            <div class="mb-3">
+                                <textarea class="form-control ui-bg-soft rounded-4" rows="4" asp-for="descripcionRAM" placeholder="Narración de la reacción adversa" maxlength="300"></textarea>
+                                <span asp-validation-for="descripcionRAM" class="text-danger"></span>
+                            </div>
+
+                            <!-- Datos del notificador -->
+                            <h5 class="mb-3 ui-text-primary">Datos del Notificador</h5>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="mb-3">
+                                        <input type="text" class="form-control ui-bg-soft rounded-4" asp-for="nombreNotificador" placeholder="Nombre" maxlength="100">
+                                        <span asp-validation-for="nombreNotificador" class="text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="mb-3">
+                                        <input type="tel" maxlength="9" class="form-control ui-bg-soft rounded-4 cls-numeric" asp-for="celularNotificador" placeholder="Número de contacto" onkeyup="validarDigitosCelular(this.value, this.id)">
+                                        <span asp-validation-for="celularNotificador" class="text-danger"></span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="d-flex">
+                                <button type="submit" class="btn rounded-pill px-4" style="color:#ffffff; background: #4f8c4c; ">Registrar</button>
+                            </div>
+                        </form>
+
+
+                        <p class="mt-3 ui-text-muted">Confidencialidad y Compromiso: Valoramos tu privacidad. Toda información recibida se maneja de forma confidencial, respetando nuestro compromiso ético y el cumplimiento de las normativas de protección de datos.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <!--En el archivo Layout.cshtml este section se ubica al final de los scripts en RenderSectionAsync
+    Gracias a este section nos permite hacer las validaciones antes de enviar el POST
+    en pocas palabras hace las validaciones en el front
+    -->
+    <partial name="_ValidationScriptsPartial" />
+
+    <script>
+           document.getElementById("formCrear").addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            const form = this;
+
+
+            if (!$(form).valid()) {
+
+                return;
+            }
+
+            const formData = new FormData(form);
+
+            fetch('@Url.Action("Crear", "Home")', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => {
+                if (response.ok) {
+
+                    Swal.fire({
+                        icon: 'success',
+                        title: 'Registro exitoso',
+                        text: 'Los datos fueron registrados correctamente.',
+                        confirmButtonText: 'Aceptar'
+                    }).then(() => {
+
+                        form.reset();
+
+                        const selects = form.querySelectorAll("select");
+                        selects.forEach(s => s.selectedIndex = 0);
+
+
+                        $(".text-danger").text("");
+                    });
+
+                } else if (response.status === 400) {
+                    // ❌ Validación del servidor (por seguridad)
+                    // NO mostrar SweetAlert
+                } else {
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Error',
+                        text: 'No se pudo guardar la información.'
+                    });
+                }
+            });
+        });
+
+    </script>
+
+
+}
