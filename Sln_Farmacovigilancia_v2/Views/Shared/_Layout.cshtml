@@ -110,6 +110,58 @@
         </div>
     </footer>
   
+    @{
+        var currentAction = ViewContext.RouteData.Values["action"]?.ToString()?.ToLower();
+        var showBubble = currentAction == "index" || currentAction == "productos";
+    }
+
+    @if (showBubble)
+    {
+        <!-- Burbuja flotante -->
+        <a href="@Url.Action("RegistrarFarmacovigilancia", "Home")" class="floating-bubble" title="Ir a Farmacovigilancia">
+            <img src="@Url.Content("~/img/Escudo - farmacovigilancia.png")" alt="Escudo Farmacovigilancia" />
+        </a>
+        <style>
+            .floating-bubble {
+                position: fixed;
+                right: -10px; 
+                bottom: 30px;
+                width: 200px; 
+                height: 200px; /* Reducimos la altura del contenedor para cortar la parte inferior */
+                z-index: 9999;
+                cursor: pointer;
+                transition: transform 0.3s ease;
+                /* El overflow hidden corta cualquier cosa (como la sombra) que salga del alto de 330px */
+                overflow: hidden;
+            }
+
+            /* Responsive: Si la pantalla es muy pequeña (móviles/tabletas), lo hacemos más chico */
+            @@media (max-width: 768px) {
+                .floating-bubble {
+                    width: 120px;
+                    height: 120px;
+                    right: -20px;
+                    bottom: 20px;
+                }
+            }
+
+            .floating-bubble:hover {
+                transform: scale(1.1);
+            }
+
+            .floating-bubble img {
+                width: 100%;
+                height: 100%;
+                /* 'cover' en lugar de 'contain' nos permite agrandar la imagen dentro del contenedor */
+                object-fit: cover; 
+                /* Bajamos la imagen un poco para empujar la sombra fuera del marco visible */
+                object-position: center bottom;
+                /* Agregamos una sombra que se adapta exacto a la silueta del escudo */
+                filter: drop-shadow(0 6px 12px rgba(0,0,0,0.35));
+            }
+        </style>
+    }
+
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
