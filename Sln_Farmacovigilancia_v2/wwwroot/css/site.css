@@ -83,26 +83,7 @@ main {
     width: 5%;
 }
 
-@media (min-width: 768px) {
-    .carousel-item {
-        height: 400px;
-    }
 
-        .carousel-item > .row,
-        .carousel-item .col-md-6 {
-            height: 100%;
-        }
-
-        .carousel-item img {
-            height: 100%;
-            object-fit: cover;
-        }
-}
-
-.carousel-item img {
-    height: 100%;
-    object-fit: cover;
-}
 
 .hero-caption {
     left: 0;

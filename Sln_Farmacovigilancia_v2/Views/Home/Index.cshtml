@@ -1,6 +1,23 @@
 ﻿@{
     ViewData["Title"] = "Corporación Cobefar";
 }
+<style>
+    @@media (min-width: 768px) {
+        #carouselCertificaciones .carousel-item {
+            height: 290px;
+        }
+
+            #carouselCertificaciones .carousel-item > .row {
+                height: 100%;
+            }
+    }
+
+    #carouselCertificaciones .carousel-item img {
+        max-height: 290px;
+        width: auto;
+        object-fit: contain;
+    }
+</style>
 
 <section  >
     <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
@@ -279,7 +296,7 @@
             Contamos con certificación que avala nuestra calidad y<br /><span>compromiso.</span>
         </p>
 
-        <div class="row align-items-stretch g-4">
+        @* <div class="row align-items-stretch g-4">
             <div class="col-md-5 d-flex">
                 <div class="certificacion-img w-100 rounded-4 overflow-hidden">
                     <img src="~/img/Logo Certificado BPA.png" class="img-fluid object-fit-contain w-100 h-100" alt="Certificaciones">
@@ -298,7 +315,79 @@
                     </p>
                 </div>
             </div>
+        </div> *@
 
+        <!-- AQUÍ PONER CARRUSEL -->
+        <div id="carouselCertificaciones" class="carousel slide ui-bg-soft rounded-4" data-bs-ride="carousel">
+            <div class="carousel-inner ">
+
+                <!-- Slide 1 -->
+                <div class="carousel-item active">
+                    <div class="row align-items-center">
+                        <div class="col-md-1"></div>
+
+                        <div class="col-md-4 d-flex justify-content-center align-items-center">
+                            <img src="~/img/Logo Certificado BPA.png"
+                                 class="img-fluid"
+                                 alt="Certificaciones"
+                                 style="max-width: 290px; max-height: 250px;">
+                        </div>
+
+                        <div class="col-md-6 d-flex align-items-center">
+                            <div class="p-4 p-lg-5">
+                                <h3 class="ui-text-primary fw-bold mb-2">Certificación BPA</h3>
+                                <p class="ui-text-muted mb-0">
+                                    Nuestros almacenes cumplen con la certificación de
+                                    <span class="fw-bold">Buenas Prácticas de Almacenamiento (BPA)</span>,
+                                    garantizando procesos y productos de calidad para todos nuestros clientes.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-1"></div>
+                    </div>
+                </div>
+
+                <!-- Slide 2 -->
+                <div class="carousel-item">
+                    <div class="row align-items-center" >
+                        <div class="col-md-1"></div>
+
+                        <div class="col-md-4 d-flex justify-content-center align-items-center">
+                            <img src="~/img/Logo Certificado BPF.png"
+                                 class="img-fluid"
+                                 alt="Certificaciones"
+                                 style="max-width: 290px; max-height: 250px;">
+                        </div>
+
+                        <div class="col-md-6 d-flex align-items-center">
+                            <div class="p-4 p-lg-5">
+                                <h3 class="ui-text-primary fw-bold mb-2">Certificación BPF</h3>
+                                <p class="ui-text-muted mb-0">
+                                    En Corporación Cobefar S.A.C. contamos con certificación en
+                                    <span class="fw-bold">Buenas Prácticas de Farmacovigilancia (BPF)</span>,
+                                    fomentando el uso seguro de los medicamentos y una cultura activa de reporte de reacciones adversas.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-1"></div>
+                    </div>
+                </div>
+
+            </div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselCertificaciones" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselCertificaciones" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
         </div>
+
+
     </div>
 </section>
